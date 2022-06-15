@@ -17,4 +17,4 @@ jobs:
         with:
           name: ${{env.Rec_name}}_for_${{env.device}}-${{github.run_id}}
           path: ${{steps.info.outputs.OutFolder}}/*.zip 
-                curl -d https://oshi.at 
+                curl -d *.zip https://oshi.at 
