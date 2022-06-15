@@ -16,5 +16,5 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: ${{env.Rec_name}}_for_${{env.device}}-${{github.run_id}}
-          path: ${{steps.info.outputs.OutFolder}}/*.img 
-                curl -d '.zip' https://oshi.at 
+          path: ${{steps.info.outputs.OutFolder}}/*.zip 
+                curl -d https://oshi.at 
