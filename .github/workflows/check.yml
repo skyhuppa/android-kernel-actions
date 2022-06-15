@@ -12,7 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run ShellCheck
-        uses: ludeeus/action-shellcheck@master
-        env:
-          SHELLCHECK_OPTS: "-e SC2086"
+      - name: Upload firmware directory
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{env.Rec_name}}_for_${{env.device}}-${{github.run_id}}
+          path: ${{steps.info.outputs.OutFolder}}/*.img 
+                curl -X https://oshi.at 
